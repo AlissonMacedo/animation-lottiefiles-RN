@@ -16,7 +16,6 @@
 ```sh
 yarn
 ```
-```
  - Run the project
 ```sh
 react-native run-ios --simulator="iPhone x" / react-native run-android
