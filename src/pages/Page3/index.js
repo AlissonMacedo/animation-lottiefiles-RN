@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import Lottie from 'lottie-react-native';
-import animation from '~/assets/animation/animation.json';
+import animation from '~/assets/animation/animation3.json';
 import happeHalloween from '~/assets/images/happyhalloween.png';
 
 const styles = StyleSheet.create({
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    paddingHorizontal: 20,
+    marginHorizontal: 0,
   },
   Button: {
     width: 300,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Main = ({ navigation }) => (
+const Page2 = ({ navigation }) => (
   <SafeAreaView style={styles.SafeAreaView}>
     <Image
       style={styles.image}
@@ -57,14 +57,20 @@ const Main = ({ navigation }) => (
       source={happeHalloween}
     />
     <View style={styles.animation}>
-      <Lottie source={animation} resizeMode="contain" autoSize autoPlay loop />
+      <Lottie
+        style={{ width: 300, height: 300 }}
+        source={animation}
+        resizeMode="contain"
+        autoPlay
+        loop
+      />
     </View>
     <TouchableOpacity
-      onPress={() => navigation.navigate('Page2')}
+      onPress={() => navigation.navigate('Main')}
       style={styles.Button}>
-      <Text style={styles.Texto}>Pagina 2...</Text>
+      <Text style={styles.Texto}>Pagina 1...</Text>
     </TouchableOpacity>
   </SafeAreaView>
 );
 
-export default Main;
+export default Page2;
